@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="img/favicon.ico">
+    <meta charset="UTF-8">
+    <title>Lab 1 Riabokon</title>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body class="base">
+<header>
+    <h1>Riabokon Arhip, P3231, Option 3113</h1>
+</header>
+
+<main>
+    <section class="meaning">
+        <svg id="graph" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+            <!--Coordinates axes-->
+            <line stroke="black" x1="0" x2="400" y1="200" y2="200"></line>
+            <line stroke="black" x1="200" x2="200" y1="0" y2="400"></line>
+            <!--Axis directions-->
+            <polygon fill="black" stroke="black" points="400,200 385,205 385,195"></polygon>
+            <polygon fill="black" stroke="black" points="200,0 195,10 205,10"></polygon>
+            <!--Section-->
+            <line stroke="black" x1="50" x2="50" y1="195" y2="205"></line>
+            <line stroke="black" x1="125" x2="125" y1="195" y2="205"></line>
+            <line stroke="black" x1="275" x2="275" y1="195" y2="205"></line>
+            <line stroke="black" x1="350" x2="350" y1="195" y2="205"></line>
+            <line stroke="black" x1="195" x2="205" y1="50" y2="50"></line>
+            <line stroke="black" x1="195" x2="205" y1="125" y2="125"></line>
+            <line stroke="black" x1="195" x2="205" y1="275" y2="275"></line>
+            <line stroke="black" x1="195" x2="205" y1="350" y2="350"></line>
+            <!--- Units --->
+            <text fill="black" x="40" y="190">-R</text>
+            <text fill="black" x="110" y="190">-R/2</text>
+            <text fill="black" x="265" y="190">R/2</text>
+            <text fill="black" x="345" y="190">R</text>
+            <text fill="black" x="210" y="54">R</text>
+            <text fill="black" x="210" y="128">R/2</text>
+            <text fill="black" x="210" y="278">-R/2</text>
+            <text fill="black" x="210" y="353">-R</text>
+            <text fill="black" x="387" y="190">X</text>
+            <text fill="black" x="210" y="10">Y</text>
+            <!--Areas-->
+            <polygon fill="#fd6d6d" fill-opacity="0.4" stroke="black" points="125,200 200,350 200,200"></polygon>
+            <polygon fill="#1d62e1" fill-opacity="0.4" stroke="black" points="50,200 50,125 200,125 200,200"></polygon>
+            <path fill="#1fce07" fill-opacity="0.4" stroke="black" d="M 200,50 A 150,150  90 0,1 350,200 L 200,200 Z"></path>
+        </svg>
+    <aside class="bord">
+        <h2 style="">Input data:</h2>
+        <table class="tableData">
+            <tr style="background: #e88989">
+                <td>X</td>
+                <td>Y</td>
+                <td>R</td>
+            </tr>
+            <tr style="background: #ffb0b0">
+                <td><label for="xArgument"></label><input class="rangeInput" type="text" id="xArgument"></td>
+                <td><label for="yArgument"></label><input class="rangeInput" type="text" id="yArgument"></td>
+                <td><label for="rArgument"></label><input class="rangeInput" type="text" id="rArgument"></td>
+            </tr>
+        </table>
+        <p>
+            <br>X in (-3 ... 5)
+            <br>Y in (-3 ... 3)
+            <br>R in (2 ... 5)
+
+        </p>
+        <button onclick="shoot_graph(document.getElementById('xArgument').value, document.getElementById('yArgument').value, document.getElementById('rArgument').value)" class="buttonData">Shoot</button>
+    </aside>
+    </section>
+</main>
+<footer>
+    <p>Author: Riabokon Arhip Borisovich<br>
+        <a href="mailto:rabokony@icloud.com">rabokony@icloud.com</a></p>
+</footer>
+</body>
+</html>

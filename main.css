@@ -1,0 +1,85 @@
+header {
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 1em 5%;
+    background: #2c3e50;
+    color: #fff;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1em 5%;
+    background: #3e5062;
+    color: #fff;
+}
+
+header h1{
+    font-family: monospace;
+}
+
+
+
+.base{
+    background: rgba(255, 128, 0, 0.47);
+}
+
+.meaning{
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.buttonData{
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+    margin-top: 5%;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: .5em 2em;
+    outline: none;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #FDBE33 #000 #D77206;
+    border-radius: 6px;
+    background: linear-gradient(#F3AE0F, #E38916) #E38916;
+    transition: 0.2s;
+}
+button:hover{background: linear-gradient(#f5ae00, #f59500) #f5ae00;}
+button:active { background: linear-gradient(#f59500, #f5ae00) #f59500; }
+
+.bord{
+    box-shadow: 8px 8px 5px #444;
+    border-radius: 10px;
+    margin-right: 5%;
+    text-align: center;
+    float: right;
+    width: 35%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    background-image: radial-gradient(#fd9090, #855085);
+}
+
+.plane{
+    margin-left: 5%;
+    float: left;
+    width: 35%;
+}
+
+.tableData{
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 5px;
+    background-color: black;
+    width: 80%;
+    height: 50%;
+}
+
+.rangeInput{
+    width: 20%;
+    height: 100%;
+
+}
