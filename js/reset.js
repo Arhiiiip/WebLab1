@@ -39,5 +39,6 @@ document.querySelector("#buttonReset").onclick = function reset(){
 
     table.replaceWith(table_new);
 
+    count_rows = 0;
     sessionStorage.clear();
 }

@@ -1,15 +1,17 @@
-let count_rows = 0;
+let dollar = jQuery.noConflict();
+
+let count_rows = (sessionStorage.length/6);
 
 let nameTag = ['X', 'Y', 'R', 'CT', 'ET', 'Re'];
 
-$('form').on('submit', function (event) {
+dollar('form').on('submit', function (event) {
     event.preventDefault()
-    let x = $('#xArgument').val();
-    let y = $('#yArgument').val();
-    let r = $('#rArgument').val();
+    let x = dollar('#xArgument').val();
+    let y = dollar('#yArgument').val();
+    let r = dollar('#rArgument').val();
     if (validate(x, y, r)) {
         shoot(x, y, r);
-        $.ajax({
+        dollar.ajax({
             url: 'php/main.php',
             type: 'POST',
             cache: false,
@@ -36,8 +38,8 @@ function add_row(data) {
     let countTag = 0;
     count_rows = count_rows + 1;
     cleanError();
-    let start_row = document.getElementById('startTable');
-    let real_row = document.createElement('tr');
+    let start_row = dollar('startTable');
+    let real_row = dollar('tr');
     for (let i in data){
         let info = document.createElement('td');
         info.innerHTML = data[i];
@@ -85,21 +87,21 @@ function shoot(x, y, r) {
 function cleanError(){
     let errorRow = document.getElementById('error');
     errorRow.innerHTML = '';
-
 }
 
 window.onload = function() {
-    let ssLen = (sessionStorage.length/6);
+    let ssLen = sessionStorage.length/6;
+    let countss = 1;
     let start_row = document.getElementById('startTable');
-    while(ssLen > 0){
+    while(ssLen + 1 > countss){
         let real_row = document.createElement('tr');
         for(let j in nameTag){
-            let key = nameTag[j] + ssLen;
+            let key = nameTag[j] + countss;
             let info = document.createElement('td');
             info.innerHTML = sessionStorage.getItem(key);
             real_row.appendChild(info);
         }
         start_row.after(real_row)
-        ssLen = ssLen - 1;
+        countss = countss + 1;
     }
 }
